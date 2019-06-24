@@ -5,7 +5,7 @@ ENV HOME=/opt/repo
 
 # install python, uwsgi, and supervisord
 RUN apt-get update && apt-get install -y supervisor uwsgi python python-pip procps vim && \
-    /usr/bin/pip install uwsgi==2.0.17 flask==1.0.2
+    /usr/bin/pip install uwsgi==2.0.17 flask==1.0.2 tornado
 
 # Source code file
 COPY ./src ${HOME}/src
